@@ -98,6 +98,76 @@ However, ```start``` can be expensive and time-consuming to run.
 
 ```bash
 $ docker logs 537270fbc66f
+# -> hello from busybox
+```
+
+### Stopping a running container
+
+To stop a detached container, run:
+
+```bash
+$ docker stop <container-id> # will give 10 second to container to stop
+```
+
+But if you want to stop it immediately:
+
+```bash
+$ docker kill <container-id>
+```
+
+### Assign a name to a container
+
+Beside using container-id we can give a name to a container:
+
+```bash
+$ docker run --name ubuntu_bash --rm -i -t ubuntu bash
+```
+
+then (in a separate terminal):
+
+```bash
+$ docker stop ubuntu_bash
+```
+
+### Execute additional command
+
+We can run commands on a running container with:
+
+```bash
+$ docker exec -it <container-id>|<name> <command> 
+```
+
+the ```-it``` is consist of ```-i``` for interactive/stdin and ```-t``` to allocate a pseudo-TTY.
+
+Suppose we run a container as:
+
+```bash
+$ docker run --name ubuntu_bash --rm -i -t ubuntu bash
+```
+
+in a separate terminal we can run:
+
+```bash
+$ docker exec -it ubuntu_bash bash
+```
+
+or create a folder by:
+
+```bash
+$ docker exec -d ubuntu_bash touch /tmp/docker_tutorial
+```
+
+We can check the effect in the first terminal with:
+
+```bash
+/ cd tmp
+/tmp/ dir
+```
+
+If the container is not in run mode we can do:
+
+```bash
+$ docker run -it <image> <command>
 ```
 
 
@@ -105,5 +175,7 @@ $ docker logs 537270fbc66f
 
 ### Reference
 [Docker and Kubernetes: The Complete Guide](https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/)
+
 [A Docker Tutorial for Beginners](https://docker-curriculum.com/)
+
 [Getting Started with Docker](https://serversforhackers.com/c/getting-started-with-docker)
