@@ -25,6 +25,33 @@ The process that runs in the operating system is called ```Daemon```. Daemon man
 
 Follow the instruction on: [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/) for Ubuntu OS.
 
+
+<br>
+
+## Check Docker status
+
+Run the Docker status checker command:
+
+```
+sudo systemctl status docker
+```
+
+You should see:
+
+```
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2020-09-22 18:43:20 AEST; 2h 12min ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 171660 (dockerd)
+      Tasks: 18
+     Memory: 53.8M
+     CGroup: /system.slice/docker.service
+             └─171660 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+...
+```
+
 <br>
 
 ## What is Kubernetes
