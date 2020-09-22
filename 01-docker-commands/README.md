@@ -15,6 +15,8 @@ $ docker run <image-name> [command]
 
 Behind the scene ```docker run``` will try to find the image in the local machine, and if not found it will download it from [Docker Hub](https://hub.docker.com/) repository.
 
+We can specify an specific version of the container with ```<image-name>:version|latest```. If we do not specify a version the system will fetch the latest by default.
+
 <br>
 
 ### Display containers
@@ -155,6 +157,8 @@ $ docker run -it --name busybox-distro busybox sh
 > Note: the order of these parameters can be important.
 
 The ```-it``` flag attaches an interactive tty in the container. This time the container is not exiting. But awaits our command. We can enter any Linux command or even install stuff there:
+
+The flag ```-d``` will run the container in background (detach).
 
 ```
 / # uname -srm
