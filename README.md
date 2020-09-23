@@ -63,6 +63,8 @@ Section 1 - **Docker commands**: basic commands.
 
 Section 2 - **First container**: a working redis container.
 
+Section 3 - **Dockerfile**: creating a docker image.
+
 
 <br><br>
 
