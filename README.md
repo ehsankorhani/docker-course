@@ -65,6 +65,8 @@ Section 2 - **First container**: a working redis container.
 
 Section 3 - **Dockerfile**: creating a docker image.
 
+Section 4 - **Dockerizing**: an app in a container.
+
 
 <br><br>
 
