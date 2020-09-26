@@ -67,6 +67,8 @@ Section 3 - **Dockerfile**: creating a docker image.
 
 Section 4 - **Dockerizing**: an app in a container.
 
+Section 5 - **Docker Compose**: define and run multi-container.
+
 
 <br><br>
 
